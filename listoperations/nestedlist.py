@@ -1,8 +1,8 @@
 emplo=[
-    [100,"ben","developer",8000],
-    [102,"joju","manager",6000],
-    [103,"roshan","accountant",3000],
-    [104,"basil","hr",4000]
+    [100,"ben","developer",8000,1989,1995],
+    [102,"joju","manager",6000,1970,1990],
+    [103,"roshan","accountant",3000,1989,1991],
+    [104,"basil","hr",4000,1990,1999]
 ]
 #print third column
 # for emp in emplo:
@@ -32,3 +32,14 @@ emplo=[
 #print employee worked in 90`s
 #print experience of each employee
 #print details of developers
+
+
+exp=[]
+for emp in emplo:
+    exp.append(emp[5]-emp[4])
+print(exp)
+high=max(exp)
+for emp in emplo:
+    exp=emp[5]-emp[4]
+    if(exp==high):
+        print("maximum experienced employee is :",emp)
